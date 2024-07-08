@@ -1,3 +1,5 @@
+import { Fragment } from "react"
+
 const BuildPriceItem = ({ text }: any) => {
     return <>
         <li className="flex items-center">
@@ -27,7 +29,7 @@ export const PricingCard = ({ packageLink, packageItems, price, oldPrice = undef
                 </div>
             }
             <ul role="list" className="space-y-5 my-7">
-                {packageItems.map((element: any) => <BuildPriceItem text={element.text} />)}
+                {packageItems.map((element: any) => <Fragment key={element.text}><BuildPriceItem text={element.text} /></Fragment>)}
             </ul>
             <a className="text-white bg-[#F2B263] cursor-pointer hover:bg-[#F2B263] focus:ring-4 focus:outline-none focus:ring-[#F2B263] font-medium rounded-lg text-sm px-5 py-2.5 inline-flex justify-center w-full text-center"
                 target="_blank"
