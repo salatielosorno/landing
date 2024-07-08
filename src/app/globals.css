@@ -31,6 +31,22 @@
     text-wrap: balance;
   }
 }
+
+@font-face {
+  font-family: 'Quicksand';
+  src: url('/fonts/Quicksand-VariableFont_wght.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Quicksand';
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 .confeti {
   top: 0 !important;
 }
