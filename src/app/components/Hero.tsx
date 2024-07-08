@@ -31,7 +31,7 @@ export default function Hero() {
         <header className="relative">
             <div className="absolute inset-x-0 bottom-0 h-1/2" />
             <div className="mx-auto">
-                <div className="relative sm:overflow-hidden h-screen mt--mobile">
+                <div className="relative sm:overflow-hidden h-screen mt--mobile grid">
                     <div className="relative px-4 pt-16 sm:pb-6 sm:pt-24 lg:pt-32 lg:px-8 flex justify-center w-4/5 m-auto">
                         <Image id='logo' width={800} src={logo} alt="Sofy Piñatas" className='h-1/4' />
                     </div>
