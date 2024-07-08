@@ -18,7 +18,7 @@ export default function Footer() {
                 <div className="chat-support__icons">
                     <a
                         className="chat-support__icon block mb-2"
-                        href="https://api.whatsapp.com/send/?phone=5212251107907"
+                        href="https://api.whatsapp.com/send/?phone=5212223609002"
                         target="_blank"
                         rel="noreferrer"
                     >

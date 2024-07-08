@@ -3,7 +3,7 @@ import { useState } from 'react'
 
 const LinkTo = ({ className, productName }: any) => {
     return <a className={className}
-        href={`https://api.whatsapp.com/send/?phone=5212251107907&text=Hola%2C%20me%20gustar%C3%ADa%20informaci%C3%B3n%20sobre%20la%20pi%C3%B1ata%20${productName}.`}
+        href={`https://api.whatsapp.com/send/?phone=5212223609002&text=Hola%2C%20me%20gustar%C3%ADa%20informaci%C3%B3n%20sobre%20la%20pi%C3%B1ata%20${productName}.`}
         target="_blank"
         rel="noreferrer">Lo quiero</a>
 }
@@ -12,7 +12,7 @@ const CardBlock = ({ src, productId, productName, productDescription, isLoading,
     return <>
         <div className="w-full max-w-sm bg-[#86A69D] rounded-lg shadow-2xl">
             <a
-                href={`https://api.whatsapp.com/send/?phone=5212251107907&text=Hola%2C%20me%20gustar%C3%ADa%20informaci%C3%B3n%20sobre%20la%20pi%C3%B1ata%20${productName}.`}
+                href={`https://api.whatsapp.com/send/?phone=5212223609002&text=Hola%2C%20me%20gustar%C3%ADa%20informaci%C3%B3n%20sobre%20la%20pi%C3%B1ata%20${productName}.`}
                 target="_blank"
                 rel="noreferrer">
                 <img className="rounded-t-lg" src={src} alt={productName} />
