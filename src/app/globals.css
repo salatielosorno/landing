@@ -92,5 +92,5 @@ html {
   object-fit: cover;
 }
 .legend--text-shadow {
-  text-shadow: 1px 1px 5px white;
+  text-shadow: 1px 1px 5px rgb(0, 76, 255);
 }

@@ -21,6 +21,31 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <title>Sofy Piñatas</title>
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" href="/favicon.ico"></link>
+        <meta name="apple-mobile-web-app-title" content="Sofy Pignatas"></meta>
+        <meta name="application-name" content="Sofy Pignatas"></meta>
+        <meta name="description" content="Todo para tu fiesta. Piñatas, Recuerdos y Decoración" />
+        <meta name="keywords" content="piñatas, fiesta, ideas para fiesta, idea de piñata, decoracion, decoración, ideas de pinatas" />
+
+        {/* <!--  Essential META Tags --> */}
+        <meta property="og:title" content="Todo para tu fiesta. Piñatas, Recuerdos y Decoración" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="http://piñatas.com/images/-pinatas.png" />
+        <meta property="og:url" content="http://piñatas.com" />
+        {/* <meta name="twitter:card" content="summary_large_image" /> */}
+
+        {/* <!--  Non-Essential, But Recommended --> */}
+        <meta property="og:description" content="Todo para tu fiesta. Piñatas, Recuerdos y Decoración" />
+        <meta property="og:site_name" content="Piñatas Sofy" />
+        <meta name="twitter:image:alt" content="Todo para tu fiesta. Piñatas, Recuerdos y Decoración" />
+
+        {/* <!--  Non-Essential, But Required for Analytics --> */}
+        {/* <meta property="fb:app_id" content="your_app_id" />
+        <meta name="twitter:site" content="@website-username" /> */}
+      </head>
       <body className={`${quicksand.variable} bg-[#F2E8DF]`}>{children}</body>
     </html>
   );

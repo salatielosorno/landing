@@ -11,9 +11,9 @@ export default function Hero() {
                     <div className="relative px-4 pt-16 sm:pb-6 sm:pt-24 lg:pt-32 lg:px-8 flex justify-center w-4/5 m-auto">
                         <Image id='logo' width={800} src={logo} alt="Sofy Piñatas" className='h-1/4' />
                     </div>
-                    <div className='md:hidden'>
+                    <div className='lg:hidden'>
                         <p className="relative left-0 right-0 mx-auto mt-5 max-w-xl text-center text-5xl  font-semibold tracking-wide text-orange-600">
-                            <span className="block text-[#F2B263] legend--text-shadow">La vida es mejor con una piñata.</span>
+                            <span className="block text-white legend--text-shadow">La vida es mejor con una piñata.</span>
                         </p>
                     </div>
                 </div>

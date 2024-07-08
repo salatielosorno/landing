@@ -25,7 +25,7 @@ export default function AppNavBar(_props: any) {
                 {navItems.map((item, index) => (
                     <ListItem key={item} disablePadding>
                         <ListItemButton sx={{ textAlign: 'center' }} href={links[index]}>
-                            <ListItemText primary={item}/>
+                            <ListItemText primary={item} sx={{textTransform: 'capitalize'}}/>
                         </ListItemButton>
                     </ListItem>
                 ))}
