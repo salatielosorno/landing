@@ -1,8 +1,32 @@
+'use client'
+
 import Image from "next/image";
+import confetti from "canvas-confetti";
 
 import logo from '../../../public/images/sofy-logo.png';
+import { useEffect } from "react";
 
 export default function Hero() {
+    useEffect(() => {
+        if (typeof document !== 'undefined') {
+            const colors = ['#F2B263', '#86A69D', '#F2C6C2', '#F28585'];
+            confetti({
+                particleCount: 150,
+                angle: 60,
+                spread: 55,
+                origin: { x: 0, y: .8 },
+                colors,
+            });
+            confetti({
+                particleCount: 150,
+                angle: 120,
+                spread: 55,
+                origin: { x: 1, y: .8 },
+                colors,
+            });
+        }
+    }, [])
+
     return (
         <header className="relative">
             <div className="absolute inset-x-0 bottom-0 h-1/2" />
