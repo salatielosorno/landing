@@ -14,12 +14,14 @@ const BuildPriceItem = ({ text }: any) => {
 export const PricingCard = ({ packageLink, packageItems, price, oldPrice = undefined, packageName }: any) => {
     return <>
         <div className="w-full max-w-sm p-4 border rounded-lg shadow sm:p-8 bg-[#86A69D]">
-            <h5 className="mb-4 text-xl font-medium text-[#FFF]">{packageName}</h5>
-            <div className="flex items-baseline text-[#FFF]">
-                <span className="text-3xl font-semibold">$</span>
-                <span className="text-5xl font-extrabold tracking-tight">{price}</span>
-                <span className="ms-1 text-xl font-normal text-[#FFF]">mxn</span>
-            </div>
+            <h5 className={`mb-4 text-[#FFF] ${price ? 'text-xl font-medium': 'text-3xl font-semibold'}`}>{packageName}</h5>
+            {
+                price && (<div className="flex items-baseline text-[#FFF]">
+                    <span className="text-3xl font-semibold">$</span>
+                    <span className="text-5xl font-extrabold tracking-tight">{price}</span>
+                    <span className="ms-1 text-xl font-normal text-[#FFF]">mxn</span>
+                </div>)
+            }
             {
                 oldPrice &&
                 <div className="flex items-baseline text-white line-through">
@@ -54,10 +56,10 @@ export default function Pinatas() {
         </div>
 
         <div className="grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
-            <PricingCard packageName="Piñata Básica" price="189.99" packageItems={[{ text: "Circular, 50cm diametro" }, { text: "Metálica" }, { text: "Imagen a elección" }]} packageLink="https://api.whatsapp.com/send/?phone=5212223609002&text=Hola%2C%20me%20gustar%C3%ADa%20informaci%C3%B3n%20sobre%20Pi%C3%B1ata%20B%C3%A1sica." />
-            <PricingCard packageName="Piñata Chica" price="229.99" packageItems={[{ text: "Circular, 50cm diametro" }, { text: "Metálica" }, { text: "Imagen a elección" }, { text: "Foamy o papel" }]} packageLink="https://api.whatsapp.com/send/?phone=5212223609002&text=Hola%2C%20me%20gustar%C3%ADa%20informaci%C3%B3n%20sobre%20Pi%C3%B1ata%20Chica." />
-            <PricingCard packageName="Piñata Mediana" price="289.99" packageItems={[{ text: "Circular, 80cm diametro" }, { text: "Metálica" }, { text: "Imagen a elección" }, { text: "Foamy o papel" }]} packageLink="https://api.whatsapp.com/send/?phone=5212223609002&text=Hola%2C%20me%20gustar%C3%ADa%20informaci%C3%B3n%20sobre%20Pi%C3%B1ata%20Mediana." />
-            <PricingCard packageName="Piñata Jumbo" price="559.99" packageItems={[{ text: "Circular, 1m. diametro" }, { text: "Metálica" }, { text: "Imagen a elección" }, { text: "Foamy o papel" }]} packageLink="https://api.whatsapp.com/send/?phone=5212223609002&text=Hola%2C%20me%20gustar%C3%ADa%20informaci%C3%B3n%20sobre%20Pi%C3%B1ata%20Jumbo." />
+            <PricingCard packageName="Piñata Básica" packageItems={[{ text: "Circular, 50cm diametro" }, { text: "Metálica" }, { text: "Imagen a elección" }]} packageLink="https://api.whatsapp.com/send/?phone=5212223609002&text=Hola%2C%20me%20gustar%C3%ADa%20informaci%C3%B3n%20sobre%20Pi%C3%B1ata%20B%C3%A1sica." />
+            <PricingCard packageName="Piñata Chica" packageItems={[{ text: "Circular, 50cm diametro" }, { text: "Metálica" }, { text: "Imagen a elección" }, { text: "Foamy o papel" }]} packageLink="https://api.whatsapp.com/send/?phone=5212223609002&text=Hola%2C%20me%20gustar%C3%ADa%20informaci%C3%B3n%20sobre%20Pi%C3%B1ata%20Chica." />
+            <PricingCard packageName="Piñata Mediana" packageItems={[{ text: "Circular, 80cm diametro" }, { text: "Metálica" }, { text: "Imagen a elección" }, { text: "Foamy o papel" }]} packageLink="https://api.whatsapp.com/send/?phone=5212223609002&text=Hola%2C%20me%20gustar%C3%ADa%20informaci%C3%B3n%20sobre%20Pi%C3%B1ata%20Mediana." />
+            <PricingCard packageName="Piñata Jumbo" packageItems={[{ text: "Circular, 1m. diametro" }, { text: "Metálica" }, { text: "Imagen a elección" }, { text: "Foamy o papel" }]} packageLink="https://api.whatsapp.com/send/?phone=5212223609002&text=Hola%2C%20me%20gustar%C3%ADa%20informaci%C3%B3n%20sobre%20Pi%C3%B1ata%20Jumbo." />
         </div >
     </>
 }
