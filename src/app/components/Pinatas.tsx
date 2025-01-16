@@ -14,7 +14,7 @@ const BuildPriceItem = ({ text }: any) => {
 export const PricingCard = ({ packageLink, packageItems, price, oldPrice = undefined, packageName }: any) => {
     return <>
         <div className="w-full max-w-sm p-4 border rounded-lg shadow sm:p-8 bg-[#86A69D]">
-            <h5 className={`mb-4 text-[#FFF] ${price ? 'text-xl font-medium': 'text-3xl font-semibold'}`}>{packageName}</h5>
+            <h5 className={`mb-4 text-[#FFF] ${price ? 'text-xl font-medium': 'text-4xl font-semibold'}`}>{packageName}</h5>
             {
                 price && (<div className="flex items-baseline text-[#FFF]">
                     <span className="text-3xl font-semibold">$</span>
