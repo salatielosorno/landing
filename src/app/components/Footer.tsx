@@ -1,35 +1,22 @@
-export default function Footer() {
-    return (
-        <footer className="mt-5 bg-[#F2B263] p-4 text-white text-xs" style={{ 'position': 'relative' }}>
-            <div className="center flex justify-center space-x-4">
-                <p>* Los precios no incluye costo por envío. Pedidos con mínimo 5 días de anticipación al evento. Todos los pedidos pasan a lista de espera con el 50% de anticipo.</p>
-            </div>
-            <br />
-            <hr />
-            <br />
-            <div className="center flex justify-center space-x-4"><p>Sofy Piñatas </p>
-                <span>|</span>
-                <span
+import Image from "next/image";
+import { waLink } from "../data/site";
 
-                    className="font-medium text-white"
-                >
-                    2024
-                </span>
-                <div className="chat-support__icons">
-                    <a
-                        className="chat-support__icon block mb-2"
-                        href="https://api.whatsapp.com/send/?phone=5212223609002"
-                        target="_blank"
-                        rel="noreferrer"
-                    >
-                        <img src="/images/whats-icon.png" alt="whats-app-icon" />
-                    </a>
-                    {/* <div className="chat-support__icon"></div> */}
-                </div>
-            </div>
-            <br />
-            <br />
-            <br />
-        </footer>
-    )
+export default function Footer() {
+  return (
+    <footer className="bg-gold px-4 pb-24 pt-10 text-center text-sm text-ink">
+      <p className="mx-auto max-w-2xl">
+        Los precios no incluyen costo por envío. Pedidos con mínimo 5 días de anticipación al evento. Todos los pedidos pasan a lista de espera con el 50% de anticipo.
+      </p>
+      <p className="mt-6 font-semibold">Sofy Todo Fiesta · {new Date().getFullYear()}</p>
+      <a
+        href={waLink()}
+        target="_blank"
+        rel="noreferrer"
+        aria-label="Escríbenos por WhatsApp"
+        className="fixed bottom-4 right-4 z-30 h-14 w-14 rounded-full shadow-lg transition active:scale-95 focus-visible:outline focus-visible:outline-4 focus-visible:outline-offset-2 focus-visible:outline-white"
+      >
+        <Image src="/images/whats-icon.png" alt="" width={56} height={56} />
+      </a>
+    </footer>
+  );
 }
